@@ -31,12 +31,12 @@ oscillator.frequency.value = 40;
 //oscillator.type ='sine';
 //oscillator.type ='square';
 //oscillator.type ='sawtooth';
-//oscillator.type ='triange';
-
+oscillator.type ='triange';
+gain.value = 2;  //this isn't connecting
 
 //turn on oscillator
 oscillator.start(now);
-//gain.volume.value = 22;
+
 oscillator.stop(now + 0.5);
 //once you stop an oscillator you can't restart it, you have to 'get another one' 
 

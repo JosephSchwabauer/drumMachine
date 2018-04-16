@@ -1,6 +1,19 @@
-document.getElementById('window').addEventListener("keydown", play);
+
+$(document).keydown(function(e){
+    if(e.keyCode == 8){
+        clickevent();
+     }
+});
+
+function clickevent() {
+    var ev = $.Event("keydown");
+    ev.which = 8;
+    ev.keyCode = 8;
+    $(document).trigger(ev);
+}
 
 
+/*
 function play(event){
                         console.log('is this thing on?');
 
@@ -14,4 +27,6 @@ function play(event){
         
 };
 
-//play();
+play();
+
+*/
