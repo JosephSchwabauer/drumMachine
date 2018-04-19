@@ -46,13 +46,14 @@ function kickBeat() {
     oscillator.stop(now + 0.5);
     oscillator.disconnect(context.destination);
 
-    var now = context.currentTime;
+    oscillator.connect(context.destination);
+
     gain.gain.setValueAtTime(1, now);
-    gain.gain.exponentialRampToValueAtTime(0.001, now + 0.5);
+    gain.gain.exponentialRampToValueAtTime(1, 2.5);
     oscillator.frequency.value = 450;
     oscillator.type = 'sine';
     gain.value = 100; //this isn't connecting
-    oscillator.stop(now + 0.5);
+    oscillator.stop(1 + 1.5);
     oscillator.disconnect(context.destination);
 }
 
